@@ -1,6 +1,6 @@
 package name.compass;
 
-import net.fabricmc.api.ModInitializer;
+import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.event.player.UseItemCallback;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.item.Items;
@@ -9,16 +9,16 @@ import net.minecraft.util.Hand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class CompassCoordinates implements ModInitializer {
+public class CompassCoordinates implements ClientModInitializer {
     public static final String MOD_ID = "compass-coordinates";
 
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     @Override
-    public void onInitialize() {
+    public void onInitializeClient() {
 
         UseItemCallback.EVENT.register((player, world, hand) -> {
-            if (!world.isClient && hand == Hand.MAIN_HAND) {
+            if (world.isClient && hand == Hand.MAIN_HAND) {
                 if (player.getStackInHand(hand).isOf(Items.COMPASS)) {
                     int x = (int) player.getX();
                     int z = (int) player.getZ();

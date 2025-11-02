@@ -15,7 +15,7 @@
 	"icon": "assets/compass-coordinates/compass.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [
+		"client": [
 			"name.compass.CompassCoordinates"
 		],
 		"fabric-datagen": [
