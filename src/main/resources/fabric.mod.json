@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "compass-coordinates",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"name": "Compass Coordinates",
 	"description": "Compass Coordinates adds feature when you right click compass, it will show X and Z coordinates!",
 	"authors": [
